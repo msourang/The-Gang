@@ -36,7 +36,7 @@
             <ul>
                 <li><a href="#more-info">More Info</a></li>
                 <li><a href="#story">The Story</a></li>
-                <li><a href="#">Sign Up</a></li>
+                <li><a href="#" onclick="showPopup()">Sign Up</a></li>
             </ul>
         </nav>
         
@@ -47,7 +47,7 @@
                 will also
                 receive pictures of us in all kinds of shapes and sizes. Cool huh ?
             </p>
-            <button class="cta">Sign Me Up!</button>
+            <a class="cta" href="#" onclick="showPopup()">Sign Me Up!</a>
             <div class="sep" id="story"></div>
         </div>
         
@@ -93,31 +93,36 @@
         <footer>
             <p>This website was created for learning purposes. &copy; Massourang</p>
         </footer>
-        <div class="popup">
+        <div id="popup" class="popup inactive">
             <div class="blanket"></div>
             <div class="content">
                 <h2>Fill In Your Details</h2>
                 <form action="">
-                    <div class="item">
-                        <label>Your First name</label>
-                        <input type="text" placeholder="Awesomeface" value="Shirley">
+                    <div class="row">
+                        <div class="item">
+                            <label>Your First name</label>
+                            <input type="text" placeholder="Awesomeface" value="Shirley">
+                        </div>
+                        <div class="item">
+                            <label>Your Last name</label>
+                            <input type="text" placeholder="Circleface">
+                        </div>
                     </div>
-                    <div class="item">
-                        <label>Your Last name</label>
-                        <input type="text" placeholder="Awesomeface" value="CircleFace">
+                    <div class="row">
+                        <div class="item">
+                            <label>Your Favorite Color</label>
+                            <input type="text" placeholder="Grey">
+                        </div>
+                        <div class="item">
+                            <label>Your Favorite Food</label>
+                            <input type="text" placeholder="Ice Cream">
+                        </div>
                     </div>
-                    <div class="item">
-                        <label>Your Favorite Color</label>
-                        <input type="text" placeholder="Awesomeface" value="Grey">
-                    </div>
-                    <div class="item">
-                        <label>Your Favorite Food</label>
-                        <input type="text" placeholder="Awesomeface" value="Apple Pie">
-                    </div>
-                    <button class="cta">I Want In!</button>
+                    <button class="cta" onclick="closePopup()">I Want In!</button>
                 </form>
-                <button class="close"></button>
+                <button class="close" onclick="closePopup()">X</button>
             </div>
         </div>
+        <script src="index.js"></script>
     </body>
 </html>
