@@ -333,6 +333,10 @@ footer p {
     cursor: pointer;
 }
 
+.popup .close:hover {
+    color: #D6CA98;
+}
+
 .popup .row {
     float: left;
     width: 325px;
